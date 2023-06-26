@@ -45,11 +45,11 @@ ggplot(fig2a,aes(
   scale_fill_discrete(name="Percetage",
                       breaks=c("ub", "lb"),
                       labels=c("positive", "negative"))
-graph2jpg(file='Supplementary Fig 22a-d',height=8,width=16,dpi=300)
+graph2jpg(file='Fig. S29a-d',height=8,width=16,dpi=300)
 
 
 
-########## Supplementary Figures 23a-i ########### 
+########## Fig. S30a-i ########### 
 
 combined=combined[combined$yi>=-2&combined$yi<=2,]
 
@@ -59,7 +59,7 @@ funnelplot=function(mydat,xlab,name) {
   graph2jpg(file=name,height=5,width=6,dpi=300)
 }
 
-########## Supplementary Figures 23a-i
+########## Fig. S30a-i
 mydat=subset(combined,
              pesticide_by_target_organisms=='insecticides'&Taxonomic_group=='animals')
 funnelplot(mydat,'Insecticides: animal effect size','Supplementary Fig 23a-i')
