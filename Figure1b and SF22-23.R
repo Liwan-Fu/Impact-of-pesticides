@@ -15,7 +15,7 @@ axis(side=1,at=seq(1350,2925,25),cex.axis=1.5)
 graph2jpg(file='Figure 1b',height=10,width=9,dpi=300)
 
 
-########## Supplemetary Figures 22a-d ###########
+########## Fig. S29a-d ###########
 Pesticide_category=c('Pesticide',
                      unique(combined$pesticide_by_target_organisms))
 dat_list1=lapply(unique(combined$Taxonomic_group_response),
@@ -62,6 +62,6 @@ funnelplot=function(mydat,xlab,name) {
 ########## Fig. S30a-i
 mydat=subset(combined,
              pesticide_by_target_organisms=='insecticides'&Taxonomic_group=='animals')
-funnelplot(mydat,'Insecticides: animal effect size','Supplementary Fig 23a-i')
+funnelplot(mydat,'Insecticides: animal effect size','Fig. S30a-i')
 
 
