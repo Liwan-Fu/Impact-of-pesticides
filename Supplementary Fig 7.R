@@ -38,7 +38,7 @@ axis(3,cex.axis=6.5)
 axis(1,at=1:nrow(Efig7a),labels=FALSE)
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans") #Arial font
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S7a-h',height=10,width=8.5,dpi=300)
+graph2jpg(file='Fig. S7 a-h',height=10,width=8.5,dpi=300)
 
 
 
