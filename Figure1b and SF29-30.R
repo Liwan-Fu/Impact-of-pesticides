@@ -31,7 +31,7 @@ for (i in 1:length(Pesticide_category)) {
 }
 colnames(dat_fig2)<-c("ub","lb")
 
-### Supplementary Figure 22
+### Fig. S29a-d
 fig2a=melt(as.data.frame(dat_fig2))
 ggplot(fig2a,aes(
   y=ifelse(variable=='ub',value,-value),
