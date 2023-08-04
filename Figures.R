@@ -37,7 +37,7 @@ abline(h=0,lty=2)
 graph2jpg(file='Figure 2a-d',height=10,width=8.5,dpi=300)
 
 
-########## Fig. S2a-d ###########
+########## Extended Data Figs. 2a-d ###########
 dat_list2=c(lapply(unique(combined$Primary.classification.of.animal......一级分类)[c(2,1,4,3,5:6)],
                    function(x){
                      subset(combined,Primary.classification.of.animal......一级分类==x)
@@ -85,7 +85,7 @@ for (i in 1:length(Pesticide_category)) {
 }
 colnames(dat_EDF1)<-c("Effect size","lb","ub")
 
-### Fig. S2a-d
+### Extended Data Fig 2a-d
 dat_EDF1a=dat_EDF1
 errbar(1:nrow(dat_EDF1a),dat_EDF1a[,1], dat_EDF1a[,2], dat_EDF1a[,3],
        pch=19,
@@ -96,10 +96,10 @@ errbar(1:nrow(dat_EDF1a),dat_EDF1a[,1], dat_EDF1a[,2], dat_EDF1a[,3],
                     rep(c('blue','green','red'),4)))
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans") #Arial font
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S2a-d',height=10,width=12,dpi=300)
+graph2jpg(file='Extended Data Fig 2a-d',height=10,width=12,dpi=300)
 
 
-########## Fig. S3a-k ###########
+########## Extended Data Figs. 3a-k ###########
 Pesticide_category=c('Pesticide',
                      unique(combined$pesticide_by_target_organisms))
 dat_list1=lapply(unique(combined$Taxonomic_group_response),
@@ -130,7 +130,7 @@ for (i in 1:length(S6_category)) {
 dat_EDF2<-as.data.frame(dat_EDF2,row.names<-Rnames)
 colnames(dat_EDF2)<-c("Effect size","lb","ub")
 
-### Fig. S3a-k
+### Extended Data Fig 3a-k
 dat_EDF2a=dat_EDF2
 errbar(1:nrow(dat_EDF2a),dat_EDF2a[,1], dat_EDF2a[,2], dat_EDF2a[,3],
        pch=19,
@@ -141,10 +141,10 @@ errbar(1:nrow(dat_EDF2a),dat_EDF2a[,1], dat_EDF2a[,2], dat_EDF2a[,3],
                     rep(c('blue','green','red'),2)))
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans") #Arial font
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S3a-k',height=10,width=8.5,dpi=300)
+graph2jpg(file='Extended Data Fig 3a-k',height=10,width=8.5,dpi=300)
 
 
-########## Fig. S4a-h ###########
+########## Extended Data Figs. 4a-h ###########
 Pesticide_category=c('Pesticide',
                      unique(combined$pesticide_by_target_organisms))
 dat_list1=lapply(unique(combined$Taxonomic_group_response),
@@ -171,7 +171,7 @@ for (k in 1:length(Experiment)) {
 dat_EDF3<-as.data.frame(dat_EDF3,row.names<-Rnames)
 colnames(dat_EDF3)<-c("#Effect","lb","ub")
 
-### Fig. S4a-h
+### Extended Data Fig 4a-h
 dat_EDF3a=dat_EDF3
 errbar(1:nrow(dat_EDF3a),dat_EDF3a[,1], dat_EDF3a[,2], dat_EDF3a[,3],
        pch=19,
@@ -182,10 +182,10 @@ errbar(1:nrow(dat_EDF3a),dat_EDF3a[,1], dat_EDF3a[,2], dat_EDF3a[,3],
                     rep(c('blue','green','red'),2)))
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans")
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S4a-h',height=10,width=8.5,dpi=300)
+graph2jpg(file='Extended Data Fig 4a-h',height=10,width=8.5,dpi=300)
 
 
-########## Fig. S5a-h ###########
+########## Extended Data Figs. 5a-h ###########
 Pesticide_category=c('Pesticide',
                      unique(combined$pesticide_by_target_organisms))
 dat_list1=lapply(unique(combined$Taxonomic_group_response),
@@ -210,7 +210,7 @@ for (k in 1:length(Experiment)) {
 }
 colnames(dat_EDF4)<-c("#Effect","lb","ub")
 
-### Fig. S5a-h
+### Extended Data Fig 5a-h
 dat_EDF4a=dat_EDF4
 errbar(1:nrow(dat_EDF4a),dat_EDF4a[,1], dat_EDF4a[,2], dat_EDF4a[,3],
        pch=19,
@@ -221,10 +221,10 @@ errbar(1:nrow(dat_EDF4a),dat_EDF4a[,1], dat_EDF4a[,2], dat_EDF4a[,3],
                     rep(c('blue','green','red'),2)))
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans") #Arial font
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S5a-h',height=10,width=8.5,dpi=300)
+graph2jpg(file='Extended Data Fig 5a-h',height=10,width=8.5,dpi=300)
 
 
-########## Fig. S6a-h ###########
+########## Extended Data Figs. 6a-h ###########
 Pesticide_category=c('Pesticide',
                      unique(combined$pesticide_by_target_organisms))
 dat_list1=lapply(unique(combined$Taxonomic_group_response),
@@ -249,7 +249,7 @@ for (k in 1:length(Experiment)) {
 }
 colnames(dat_EDF5)<-c("#Effect","lb","ub")
 
-### Fig. S6a-h
+### Extended Data Fig 6a-h
 dat_EDF5a=dat_EDF5
 errbar(1:nrow(dat_EDF5a),dat_EDF5a[,1], dat_EDF5a[,2], dat_EDF5a[,3],
        pch=19,
@@ -260,7 +260,7 @@ errbar(1:nrow(dat_EDF5a),dat_EDF5a[,1], dat_EDF5a[,2], dat_EDF5a[,3],
                     rep(c('blue','green','red'),2)))
 mtext("Effect size",side=4,line=3,cex=1.5,family="sans") #Arial font
 abline(h=0,lty=2)
-graph2jpg(file='Fig. S6a-h',height=10,width=8.5,dpi=300)
+graph2jpg(file='Extended Data Fig 6a-h',height=10,width=8.5,dpi=300)
 
 
 ########## Relationship plot ###########
@@ -525,428 +525,422 @@ number='l'
 linear_plot(dat,columname,roname,number)
 graph2jpg(file='Figure 3l',height=6,width=8,dpi=300)
 
-####### Fig. S8 ######
+####### Supplementary Fig 1 ######
 dat_F6=subset(combined,Experiment.type=='Laboratory')
 
-### Fig. S8a
+### Supplementary Fig 1a
 dat=dat_F6[dat_F6$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 number='a'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8a',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1a',height=6,width=8,dpi=300)
 
-### Fig. S8b
+### Supplementary Fig 1b
 dat=dat_F6[dat_F6$Taxonomic_group=='plants',]
 columname='Plant'
 roname='pesticide'
 number='b'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8b',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1b',height=6,width=8,dpi=300)
 
-### Fig. S8c
+### Supplementary Fig 1c
 dat=dat_F6[dat_F6$Taxonomic_group=='microorganisms',]
 columname='Microorganism'
 roname='pesticide'
 number='c'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8c',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1c',height=6,width=8,dpi=300)
 
-### Fig. S8d
+### Supplementary Fig 1d
 dat=subset(dat_F6,Taxonomic_group=='animals'&pesticide_by_target_organisms=='insecticides')
 columname='Animal'
 roname='insecticide'
 number='d'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8d',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1d',height=6,width=8,dpi=300)
 
-### Fig. S8e
+### Supplementary Fig 1e
 dat=subset(dat_F6,Taxonomic_group=='plants'&pesticide_by_target_organisms=='insecticides')
 columname='Plant'
 roname='insecticide'
 number='e'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8e',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1e',height=6,width=8,dpi=300)
 
-### Fig. S8f
+### Supplementary Fig 1f
 dat=subset(dat_F6,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='insecticides')
 columname='Microorganism'
 roname='insecticide'
 number='f'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8f',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1f',height=6,width=8,dpi=300)
 
-### Fig. S8g
+### Supplementary Fig 1g
 dat=subset(dat_F6,Taxonomic_group=='animals'&pesticide_by_target_organisms=='fungicides')
 columname='Animal'
 roname='fungicide'
 number='g'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8g',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1g',height=6,width=8,dpi=300)
 
-### Fig. S8h
+### Supplementary Fig 1h
 dat=subset(dat_F6,Taxonomic_group=='plants'&pesticide_by_target_organisms=='fungicides')
 columname='Plant'
 roname='fungicide'
 number='h'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1h',height=6,width=8,dpi=300)
 
-### Fig. S8i
+### Supplementary Fig 1i
 dat=subset(dat_F6,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='fungicides')
 columname='Microorganism'
 roname='fungicide'
 number='i'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8i',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1i',height=6,width=8,dpi=300)
 
-### Fig. S8j
+### Supplementary Fig 1j
 dat=subset(dat_F6,Taxonomic_group=='animals'&pesticide_by_target_organisms=='herbicides'&Taxonomic_group_response!='animal reproduction')
 columname='Animal'
 roname='herbicides'
 number='j'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8j',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1j',height=6,width=8,dpi=300)
 
-### Fig. S8k
+### Supplementary Fig 1k
 dat=subset(dat_F6,Taxonomic_group=='plants'&pesticide_by_target_organisms=='herbicides')
 columname='Plant'
 roname='herbicides'
 number='k'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8k',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1k',height=6,width=8,dpi=300)
 
-### Fig. S8l
+### Supplementary Fig 1l
 dat=subset(dat_F6,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='herbicides')
 columname='Microorganism'
 roname='herbicides'
 number='l'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S8l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 1l',height=6,width=8,dpi=300)
 
 
-####### Fig. S9 ######
+####### Supplementary Fig 2 ######
 dat_F7=subset(combined,Experiment.type=='Field')
 
-### Fig. S9a
+### Supplementary Fig 2a
 dat=dat_F7[dat_F7$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 number='a'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9a',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2a',height=6,width=8,dpi=300)
 
-### Fig. S9b
+### Supplementary Fig 2b
 dat=dat_F7[dat_F7$Taxonomic_group=='plants',]
 columname='Plant'
 roname='pesticide'
 number='b'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9b',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2b',height=6,width=8,dpi=300)
 
-### Fig. S9c
+### Supplementary Fig 2c
 dat=dat_F7[dat_F7$Taxonomic_group=='microorganisms',]
 columname='Microorganism'
 roname='pesticide'
 number='c'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9c',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2c',height=6,width=8,dpi=300)
 
-### Fig. S9d
+### Supplementary Fig 2d
 dat=subset(dat_F7,Taxonomic_group=='animals'&pesticide_by_target_organisms=='insecticides')
 columname='Animal'
 roname='insecticide'
 number='d'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9d',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2d',height=6,width=8,dpi=300)
 
-### Fig. S9e
+### Supplementary Fig 2e
 dat=subset(dat_F7,Taxonomic_group=='plants'&pesticide_by_target_organisms=='insecticides')
 columname='Plant'
 roname='insecticide'
 number='e'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9e',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2e',height=6,width=8,dpi=300)
 
-### Fig. S9f
+### Supplementary Fig 2f
 dat=subset(dat_F7,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='insecticides')
 columname='Microorganism'
 roname='insecticide'
 number='f'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9f',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2f',height=6,width=8,dpi=300)
 
-### Fig. S9g
+### Supplementary Fig 2g
 dat=subset(dat_F7,Taxonomic_group=='animals'&pesticide_by_target_organisms=='fungicides'&Taxonomic_group_response!='animal biomarker')
 columname='Animal'
 roname='fungicide'
 number='g'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9g',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2g',height=6,width=8,dpi=300)
 
-### Fig. S9h
+### Supplementary Fig 2h
 dat=subset(dat_F7,Taxonomic_group=='plants'&pesticide_by_target_organisms=='fungicides')
 columname='Plant'
 roname='fungicide'
 number='h'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2h',height=6,width=8,dpi=300)
 
-### Fig. S9i
+### Supplementary Fig 2i
 dat=subset(dat_F7,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='fungicides'&Taxonomic_group_response!='microorganism growth')
 columname='Microorganism'
 roname='fungicide'
 number='i'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9i',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2i',height=6,width=8,dpi=300)
 
-### Fig. S9j
+### Supplementary Fig 2j
 dat=subset(dat_F7,Taxonomic_group=='animals'&pesticide_by_target_organisms=='herbicides'&Taxonomic_group_response!='animal behavior')
 columname='Animal'
 roname='herbicides'
 number='j'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9j',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2j',height=6,width=8,dpi=300)
 
-### Fig. S9k
+### Supplementary Fig 2k
 dat=subset(dat_F7,Taxonomic_group=='plants'&pesticide_by_target_organisms=='herbicides')
 columname='Plant'
 roname='herbicides'
 number='k'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9k',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2k',height=6,width=8,dpi=300)
 
-### Fig. S9l
+### Supplementary Fig 2l
 dat=subset(dat_F7,Taxonomic_group=='microorganisms'&pesticide_by_target_organisms=='herbicides')
 columname='Microorganism'
 roname='herbicides'
 number='l'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S9l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 2l',height=6,width=8,dpi=300)
 
 
-####### Fig. S10 ######
+####### Supplementary Fig 3 ######
 dat_F8=subset(combined,Experiment.type=='Field'&Major.climatic.zones=='Temperate')
 
-### Fig. S10a-l
+### Supplementary Fig 3a-l
 dat=dat_F8[dat_F8$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S10a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 3a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S11 ######
+####### Supplementary Fig 4 ######
 dat_F9=subset(combined,Experiment.type=='Field'&Major.climatic.zones=='Tropical')
 
-### Fig. S11a-l
+### Supplementary Fig 4a-l
 dat=dat_F9[dat_F9$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S11a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 4a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S12 ######
+####### Supplementary Fig 5 ######
 dat_F10=subset(combined,Types.of.organism.exposure.to.pesticides=='Aquatic')
 
-### Fig. S12a-l
+### Supplementary Fig 5a-l
 dat=dat_F10[dat_F10$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S12a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 5a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S13 ######
+####### Supplementary Fig 6 ######
 dat_F11=subset(combined,Types.of.organism.exposure.to.pesticides=='Terrestrial')
 
-### Fig. S13a-l
+### Supplementary Fig 6a-l
 dat=dat_F11[dat_F11$Taxonomic_group=='animals',]
 columname='Animal'
 roname='pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S13a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 6a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S14 ######
+####### Supplementary Fig 7 ######
 dat_F12=subset(combined,pesticide_by_source=='chemical')
 
-### Fig. S14a-l
+### Supplementary Fig 7a-l
 dat=dat_F12[dat_F12$Taxonomic_group=='animals',]
 columname='Animal'
 roname='chemical synthetic pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S14a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 7a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S15 ######
+####### Supplementary Fig 8 ######
 dat_F13=subset(combined,pesticide_by_source=='mineral-based')
 
-### Fig. S15a-l
+### Supplementary Fig 8a-l
 dat=dat_F13[dat_F13$Taxonomic_group=='animals',]
 columname='Animal'
 roname='mineral-based pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S15a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 8a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S16 ######
+####### Supplementary Fig 9 ######
 dat_F14=subset(combined,pesticide_by_source=='biogenic')
 
-### Fig. S16a-l
+### Supplementary Fig 9a-l
 dat=dat_F14[dat_F14$Taxonomic_group=='animals',]
 columname='Animal'
 roname='biogenic pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S16a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 9a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S17 ######
+####### Supplementary Fig 10 ######
 dat_F15_I=subset(combined,Primary.classification.of.animal......一级分类=='Invertebrate')
 dat_F15_V=subset(combined,Primary.classification.of.animal......一级分类=='Vertebrate')
 
-### Fig. S17a-l
+### Supplementary Fig 10a-l
 dat=dat_F15_I
 columname='Invertebrate animal'
 roname='Pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S17a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 10a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S18 ######
+####### Supplementary Fig 11 ######
 dat_F16_I=subset(combined,Primary.classification.of.animal......一级分类=='Invertebrate'&pesticide_by_target_organisms=='insecticides')
 dat_F16_V=subset(combined,Primary.classification.of.animal......一级分类=='Vertebrate'&pesticide_by_target_organisms=='insecticides')
 
-### Fig. S18a-l
+### Supplementary Fig 11a-l
 dat=dat_F16_I
 columname='Invertebrate animal'
 roname='insecticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S18a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 11a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S19 ######
+####### Supplementary Fig 12 ######
 dat_F17_I=subset(combined,Primary.classification.of.animal......一级分类=='Invertebrate'&pesticide_by_target_organisms=='fungicides')
 dat_F17_V=subset(combined,Primary.classification.of.animal......一级分类=='Vertebrate'&pesticide_by_target_organisms=='fungicides')
 
-### Fig. S19a-h
+### Supplementary Fig 12a-h
 dat=dat_F17_I
 columname='Invertebrate animal'
 roname='fungicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S19a-l',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 12a-l',height=6,width=8,dpi=300)
 
 
-####### Fig. S20 ######
+####### Supplementary Fig 13 ######
 dat_F18_I=subset(combined,Primary.classification.of.animal......一级分类=='Invertebrate'&pesticide_by_target_organisms=='herbicides')
 dat_F18_V=subset(combined,Primary.classification.of.animal......一级分类=='Vertebrate'&pesticide_by_target_organisms=='herbicides')
 
-### Fig. S20a-h
+### Supplementary Fig 13a-h
 dat=dat_F18_I
 columname='Invertebrate animal'
 roname='herbicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S20a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 13a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S21 ######
+####### Supplementary Fig 14 ######
 dat_F19_1=subset(combined,Primary.classification.of.animal......一级分类=='Seed plant')
 dat_F19_2=subset(combined,Primary.classification.of.animal......一级分类=='Spore-producing  plant')
 
-### Fig. S21a-h
+### Supplementary Fig 14a-h
 dat=dat_F19_1
 columname='Seed plant'
 roname='Pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S21a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 14a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S22 ######
+####### Supplementary Fig 15 ######
 dat_F20_1=subset(combined,Primary.classification.of.animal......一级分类=='Seed plant' & pesticide_by_target_organisms=='insecticides')
 dat_F20_2=subset(combined,Primary.classification.of.animal......一级分类=='Spore-producing  plant' & pesticide_by_target_organisms=='insecticides')
 
-### Fig. S22a-h
+### Supplementary Fig 15a-h
 dat=dat_F20_1
 columname='Seed plant'
 roname='insecticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S22a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 15a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S23 ######
+####### Supplementary Fig 16 ######
 dat_F21_1=subset(combined,Primary.classification.of.animal......一级分类=='Seed plant' & pesticide_by_target_organisms=='fungicides')
 dat_F21_2=subset(combined,Primary.classification.of.animal......一级分类=='Spore-producing  plant' & pesticide_by_target_organisms=='fungicides')
 
-### Fig. S23a-h
+### Supplementary Fig 16a-h
 dat=dat_F21_1
 columname='Seed plant'
 roname='fungicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S23a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 16a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S24 ######
+####### Supplementary Fig 17 ######
 dat_F22_1=subset(combined,Primary.classification.of.animal......一级分类=='Seed plant' & pesticide_by_target_organisms=='herbicides')
 dat_F22_2=subset(combined,Primary.classification.of.animal......一级分类=='Spore-producing  plant' & pesticide_by_target_organisms=='herbicides')
 
-### Fig. S24a-h
+### Supplementary Fig 17a-h
 dat=dat_F22_1
 columname='Seed plant'
 roname='herbicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S24a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 17a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S25 ######
+####### Supplementary Fig 18 ######
 dat_F23_1=subset(combined,Primary.classification.of.animal......一级分类=='Bacteria')
 dat_F23_2=subset(combined,Primary.classification.of.animal......一级分类=='Fungus')
 
-### Fig. S25a-h
+### Supplementary Fig 18a-h
 dat=dat_F23_1
 columname='Bacteria'
 roname='Pesticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S25a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 18a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S26 ######
+####### Supplementary Fig 19 ######
 dat_F24_1=subset(combined,Primary.classification.of.animal......一级分类=='Bacteria' & pesticide_by_target_organisms=='insecticides')
 dat_F24_2=subset(combined,Primary.classification.of.animal......一级分类=='Fungus' & pesticide_by_target_organisms=='insecticides')
 
-### Fig. S26a-h
+### Supplementary Fig 19a-h
 dat=dat_F24_1
 columname='Bacteria'
 roname='insecticide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S26a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 19a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S27 ######
+####### Supplementary Fig 20 ######
 dat_F25_1=subset(combined,Primary.classification.of.animal......一级分类=='Bacteria' & pesticide_by_target_organisms=='fungicides')
 dat_F25_2=subset(combined,Primary.classification.of.animal......一级分类=='Fungus' & pesticide_by_target_organisms=='fungicides')
 
-### Fig. S27a-h
+### Supplementary Fig 20a-h
 dat=dat_F25_1
 columname='Bacteria'
 roname='fungicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S27a-h',height=6,width=8,dpi=300)
+graph2jpg(file='Supplementary Fig 20a-h',height=6,width=8,dpi=300)
 
 
-####### Fig. S28 ######
+####### Supplementary Fig 21 ######
 dat_F26_1=subset(combined,Primary.classification.of.animal......一级分类=='Bacteria' & pesticide_by_target_organisms=='herbicides')
 dat_F26_2=subset(combined,Primary.classification.of.animal......一级分类=='Fungus' & pesticide_by_target_organisms=='herbicides')
 
-### Fig. S28a-h
+### Supplementary Fig 21a-h
 dat=dat_F26_1
 columname='Bacteria'
 roname='herbicide'
 linear_plot(dat,columname,roname,number)
-graph2jpg(file='Fig. S28a-h',height=6,width=8,dpi=300)
-
-
-
-
-
-
+graph2jpg(file='Supplementary Fig 21a-h',height=6,width=8,dpi=300)
