@@ -21,7 +21,8 @@ for (i in 1:length(Pesticide_category)) {
                          rep(NA,6))
     } else {
       res=rma.mv(yi, vi, 
-                 random = ~ 1 | factor(Insecticide.name),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                  data=mydat)
       S32[(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                          res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -71,7 +72,8 @@ for (i in 1:length(Pesticide_category)) {
                         rep(NA,6))
     } else {
       res=rma.mv(yi, vi, 
-                 random = ~ 1 | factor(Insecticide.name),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                  data=mydat)
       S33[(i-1)*24+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                          res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -102,7 +104,8 @@ for (i in 1:length(S6_category)) {
                           rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = ~ 1 | factor(Insecticide.name),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                    data=mydat)
         S34[(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                            res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -116,7 +119,8 @@ for (i in 1:length(S6_category)) {
                           rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = ~ 1 | factor(Insecticide.name),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                    data=mydat)
         S34[(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                            res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -147,7 +151,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = ~ 1 | factor(Insecticide.name),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                    data=mydat)
         S8[(k-1)*52+(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -182,7 +187,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = ~ 1 | factor(Insecticide.name),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                    data=mydat)
         S9[(k-1)*52+(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -225,7 +231,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = ~ 1 | factor(Insecticide.name),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                    data=mydat)
         S9[(k-1)*52+(i-1)*13+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
