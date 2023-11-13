@@ -45,6 +45,7 @@ for (i in 1:length(Pesticide_category)) {
       res=rma.mv(yi, vi, 
                  random =list( ~ 1 | factor(Insecticide.name),
                                ~ 1 | Code,
+                               ~ 1 | Publication_year,
                                ~ 1 | Plant.species.new,
                                ~ 1|Plant.species.new.p),
                  R=list(Plant.species.new.p=mydat[[2]]),
