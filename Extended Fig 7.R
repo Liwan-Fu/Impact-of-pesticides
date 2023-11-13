@@ -19,7 +19,8 @@ for (i in 1:length(Pesticide_category)) {
       S32[(i-1)*10+j,]=rep(NA,3)
     } else {
       res=rma.mv(yi, vi, 
-                 random = list(~ 1 | factor(Insecticide.name),~1|Code)
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                               ~1|Publication_year),
                  data=mydat)
       S32[(i-1)*10+j,]=c(res$b,res$ci.lb,res$ci.ub)
     }
