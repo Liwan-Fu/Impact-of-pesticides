@@ -17,7 +17,8 @@ for (i in 1:length(Pesticide_category)) {
     mydat=subset(dat_list1[[j]],
                    pesticide_by_target_organisms==Pesticide_category[i])
     res=rma.mv(yi, vi, 
-                 random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                              ~1|Publication_year),
                  data=mydat)
     dat_fig2[(i-1)*length(dat_list1)+j,]=c(res$b,res$ci.lb,res$ci.ub)
   }
@@ -77,7 +78,8 @@ for (i in 1:length(Pesticide_category)) {
       dat_EDF1[(i-1)*length(dat_list3)+j,]=rep(NA,3)
     } else {
       res=rma.mv(yi, vi, 
-                 random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                              ~1|Publication_year),
                  data=mydat)
       dat_EDF1[(i-1)*length(dat_list3)+j,]=c(res$b,res$ci.lb,res$ci.ub)
     }
@@ -201,7 +203,8 @@ for (k in 1:length(Experiment)) {
         dat_EDF4[(k-1)*length(Pesticide_category)*length(dat_list1)+(i-1)*length(dat_list1)+j,]=rep(NA,3)
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         dat_EDF4[(k-1)*length(Pesticide_category)*length(dat_list1)+(i-1)*length(dat_list1)+j,]=c(res$b,res$ci.lb,res$ci.ub)
       }
@@ -240,7 +243,8 @@ for (k in 1:length(Experiment)) {
         dat_EDF5[(k-1)*length(Pesticide_category)*length(dat_list1)+(i-1)*length(dat_list1)+j,]=rep(NA,3)
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         dat_EDF5[(k-1)*length(Pesticide_category)*length(dat_list1)+(i-1)*length(dat_list1)+j,]=c(res$b,res$ci.lb,res$ci.ub)
       }
@@ -287,7 +291,8 @@ linear_plot=function(dat,columname,roname,number){
       newx<-log2(seq(min(2^x),max(2^x),length=500))
       assign("mydata2", mydata, envir=.GlobalEnv) 
       fit<-try(lme(y~x,
-                   random =list(~ 1|Insecticide.name,~ 1|Code),
+                   random =list(~ 1|Insecticide.name,~ 1|Code,
+                               ~1|Publication_year),
                    weights = varFixed(~ vi),data=mydata2,control = lmeControl(sigma = 1)))
       P[i]=signif(summary(fit)$tTable[2,5],4)
       e1=Effect("x",fit,xlevels=list(x=newx))
@@ -366,7 +371,8 @@ linear_plot=function(dat,columname,roname,number){
       newx<-log2(seq(min(2^x),max(2^x),length=500))
       assign("mydata2", mydata, envir=.GlobalEnv) 
       fit<-try(lme(y~x,
-                   random =list(~ 1|Insecticide.name,~ 1|Code),
+                   random =list(~ 1|Insecticide.name,~ 1|Code,
+                               ~1|Publication_year),
                    weights = varFixed(~ vi),data=mydata2,control = lmeControl(sigma = 1)))
       P[i]=signif(summary(fit)$tTable[2,5],4)
       e1=Effect("x",fit,xlevels=list(x=newx))
