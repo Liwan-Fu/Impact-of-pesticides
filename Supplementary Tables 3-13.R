@@ -18,7 +18,8 @@ for (i in 1:length(Pesticide_category)) {
       mydat=subset(dat_list1[[j]],
                    pesticide_by_target_organisms==Pesticide_category[i])
       res=rma.mv(yi, vi, 
-                 random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                              ~1|Publication_year),
                  data=mydat)
     S4[(i-1)*length(dat_list1)+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                      res$b,res$zval,nrow(mydat)-1,
@@ -68,7 +69,8 @@ for (i in 1:length(Pesticide_category)) {
                                        rep(NA,6))
     } else {
       res=rma.mv(yi, vi, 
-                 random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                 random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                              ~1|Publication_year),
                  data=mydat)
       S5[(i-1)*length(dat_list3)+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                        res$b,res$zval,nrow(mydat)-1,
@@ -97,7 +99,8 @@ for (i in 1:length(S6_category)) {
                                          rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S6[(i-1)*length(dat_list1)+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                          res$b,res$zval,nrow(mydat)-1,
@@ -128,7 +131,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S7[(k-1)*40+(i-1)*10+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -158,7 +162,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S8[(k-1)*40+(i-1)*10+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -188,7 +193,8 @@ for (k in 1:length(Experiment)) {
                                    rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S9[(k-1)*40+(i-1)*10+j,]=c(nrow(mydat),length(unique(mydat$Code)),
                                    res$b,res$zval,nrow(mydat)-1,res$pval,res$ci.lb,res$ci.ub)
@@ -237,7 +243,8 @@ for (k in 1:length(insecti)) {
                                                 nrow(mydat),length(unique(mydat$Code)),rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S10[[k]][(i-1)*length(dat_list10)+j,]=c(paste(insecti[k],'insecticides',sep = '_'),
                                                 insecti_cate[i],Nontarget_category[j],
@@ -291,7 +298,8 @@ for (k in 1:length(fungici)) {
                                                 nrow(mydat),length(unique(mydat$Code)),rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S11[[k]][(i-1)*length(dat_list10)+j,]=c(paste(fungici[k],'fungicides',sep = '_'),
                                                 fungici_cate[i],Nontarget_category[j],
@@ -345,7 +353,8 @@ for (k in 1:length(herbici)) {
                                                 nrow(mydat),length(unique(mydat$Code)),rep(NA,6))
       } else {
         res=rma.mv(yi, vi, 
-                   random = list(~ 1 | factor(Insecticide.name),~1|Code),
+                   random = list(~ 1 | factor(Insecticide.name),~1|Code,
+                                ~1|Publication_year),
                    data=mydat)
         S12[[k]][(i-1)*length(dat_list10)+j,]=c(paste(herbici[k],'herbicides',sep = '_'),
                                                 herbici_cate[i],Nontarget_category[j],
